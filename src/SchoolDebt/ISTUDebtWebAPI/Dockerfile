@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["SchoolDebtApi/SchoolDebtApi.csproj", "SchoolDebtApi/"]
-RUN dotnet restore "SchoolDebtApi/SchoolDebtApi.csproj"
+COPY ["ISTUDebtWebAPI/ISTUDebtWebAPI.csproj", "ISTUDebtWebAPI/"]
+RUN dotnet restore "ISTUDebtWebAPI/ISTUDebtWebAPI.csproj"
 COPY . .
-WORKDIR "/src/SchoolDebtApi"
-RUN dotnet build "SchoolDebtApi.csproj" -c Release -o /app/build
+WORKDIR "/src/ISTUDebtWebAPI"
+RUN dotnet build "ISTUDebtWebAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "SchoolDebtApi.csproj" -c Release -o /app/publish
+RUN dotnet publish "ISTUDebtWebAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SchoolDebtApi.dll"]
+ENTRYPOINT ["dotnet", "ISTUDebtWebAPI.dll"]

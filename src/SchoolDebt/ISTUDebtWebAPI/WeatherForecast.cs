@@ -1,6 +1,6 @@
 using System;
 
-namespace SchoolDebtApi
+namespace ISTUDebtWebAPI
 {
     public class WeatherForecast
     {

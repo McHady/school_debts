@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:51350",
+      "applicationUrl": "http://localhost:58927",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SchoolDebtApi": {
+    "ISTUDebtWebAPI": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

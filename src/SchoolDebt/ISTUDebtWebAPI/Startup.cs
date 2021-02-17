@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SchoolDebtApi
+namespace ISTUDebtWebAPI
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace SchoolDebtApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SchoolDebtApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ISTUDebtWebAPI", Version = "v1" });
             });
         }
 
@@ -40,7 +40,7 @@ namespace SchoolDebtApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SchoolDebtApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ISTUDebtWebAPI v1"));
             }
 
             app.UseRouting();
